@@ -7,10 +7,9 @@ interface ProductListProps {
 
 export default function ProductList({ products }: ProductListProps) {
   return (
-    <div className="flex flex-col justify-center ">
+    <div className="flex flex-col justify-center space-y-2 ">
       {products.map((item) => (
-        <div className="mt-1">
-          <Link
+           <Link
             key={item.id}
             href={`/products/${item.id}`}
             className="block p-4 border rounded-lg hover:bg-gray-50 transition text-right"
@@ -20,7 +19,6 @@ export default function ProductList({ products }: ProductListProps) {
               <h2 className="text-xl font-semibold">{item.name}</h2>
             </div>
           </Link>
-        </div>
       ))}
     </div>
   );
